@@ -1,58 +1,91 @@
-# Take‑Home Assessment
+# Bitgesell Finance Assessment
 
-Welcome, candidate! This project contains **intentional issues** that mimic real‑world scenarios.
-Your task is to refactor, optimize, and fix these problems.
+A modern full-stack assessment project featuring a Node.js/Express backend and a React frontend. This project demonstrates best practices in API design, performance optimization, UI/UX, and testing.
 
-## Objectives
+---
 
-### 🔧 Backend (Node.js)
+## 🚀 Features
 
-1. **Refactor blocking I/O**  
-   - `src/routes/items.js` uses `fs.readFileSync`. Replace with non‑blocking async operations.
+- **Backend (Node.js/Express):**
+  - Non-blocking async file I/O
+  - In-memory caching for stats
+  - Paginated and searchable API
+  - Comprehensive Jest tests
+  - Solid error handling
 
-2. **Performance**  
-   - `GET /api/stats` recalculates stats on every request. Cache results, watch file changes, or introduce a smarter strategy.
+- **Frontend (React):**
+  - Modern, responsive UI with beautiful cards and header
+  - Virtualized list for smooth performance
+  - Search and pagination with server-side filtering
+  - Memory-leak-free data fetching
+  - Loading, error, and empty states
+  - Accessible and mobile-friendly
 
-3. **Testing**  
-   - Add **unit tests** (Jest) for items routes (happy path + error cases).
+---
 
-### 💻 Frontend (React)
+## 🖥️ Screenshots
 
-1. **Memory Leak**  
-   - `Items.js` leaks memory if the component unmounts before fetch completes. Fix it.
+> _Add your own screenshots here!_
 
-2. **Pagination & Search**  
-   - Implement paginated list with server‑side search (`q` param). Contribute to both client and server.
+![Main UI](./screenshots/main-ui.png)
 
-3. **Performance**  
-   - The list can grow large. Integrate **virtualization** (e.g., `react-window`) to keep UI smooth.
+---
 
-4. **UI/UX Polish**  
-   - Feel free to enhance styling, accessibility, and add loading/skeleton states.
+## 🛠️ Getting Started
 
-### 📦 What We Expect
+### Prerequisites
+- Node.js 18+
+- npm
 
-- Idiomatic, clean code with comments where necessary.
-- Solid error handling and edge‑case consideration.
-- Tests that pass via `npm test` in both frontend and backend.
-- A brief `SOLUTION.md` describing **your approach and trade‑offs**.
-
-## Quick Start
-
-node version: 18.XX
+### Backend
 ```bash
-nvm install 18
-nvm use 18
-
-# Terminal 1
 cd backend
 npm install
 npm start
+```
+Runs on [http://localhost:3001](http://localhost:3001)
 
-# Terminal 2
+### Frontend
+```bash
 cd frontend
 npm install
 npm start
 ```
+Runs on [http://localhost:3000](http://localhost:3000)
 
-> The frontend proxies `/api` requests to `http://localhost:3001`.
+---
+
+## 🧪 Running Tests
+
+### Backend
+```bash
+cd backend
+npm test
+```
+
+---
+
+## 📦 Project Structure
+```
+bitgesell_finance-test4-xxxx/
+  backend/      # Node.js/Express API
+  frontend/     # React app
+  data/         # JSON data
+  README.md
+  SOLUTION.md   # Solution writeup
+```
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+MIT
+
+---
+
+## 👤 Author
+- [shubhamsingh74](https://github.com/shubhamsingh74)

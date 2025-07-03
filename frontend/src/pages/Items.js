@@ -65,9 +65,14 @@ function Items() {
   // Main render
   return (
     <div className="items-container">
+      {/* Unique SaaS-style Items heading */}
+      <div className="items-heading">
+        <span className="items-heading-icon" role="img" aria-label="cloud">☁️</span>
+        <span className="items-heading-text">Items</span>
+      </div>
       {/* Search bar */}
       <div className="search-section">
-        <form onSubmit={handleSearch}>
+        <form onSubmit={handleSearch} className="search-form-flex">
           <input
             type="text"
             placeholder="Search items..."
